@@ -1,0 +1,20 @@
+.navbar{
+    position: relative;
+    display: flex;
+    background-color: #111421;
+    margin: 0px !important;
+    padding: none;
+    flex-direction: row;
+    width: 100vw;
+    height: 60px;
+    color: rgb(235, 235, 235);
+    align-items: center;
+
+    a{
+        text-decoration: none;
+        color: wheat;
+    }
+    a:hover {
+        color: blue;
+    }
+}
