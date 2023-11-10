@@ -1,39 +1,32 @@
 import React, { createContext, useState } from "react";
 import "./App.css";
-import Episodes from "../../pages/episodes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainLayout from "../../layouts/MainLayout";
-import Form from "../../pages/form/form";
-import Test from "../../pages/test/test";
-import { Container } from "reactstrap";
+import CardContent from "../../pages/cardContent/cardContent";
+import Login from "../../pages/login/login";
+import CreatePost from "../../pages/post/create";
+import Blog from "../../pages/blog";
+import PostView from "../../pages/post/view";
 export const GradesContext = createContext();
 
 function App() {
-  const [usersWithGrades, setUsersWithGrades] = useState([
-    {
-      name: "pepe",
-      grade: 10,
-    },
-    {
-      name: "pablo",
-      grade: 9,
-    },
-  ]);
-
-  const [activePage, setActivePage] = useState("episodes");
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<Form />} />
+          <Route index element={<Blog />} />
         </Route>
 
-        <Route path="episodes" element={<MainLayout />}>
-          <Route index element={<Episodes />} />
+        <Route path="/login" element={<MainLayout />}>
+          <Route index element={<Login />} />
         </Route>
 
-        <Route path="/test" element={<MainLayout />}>
-          <Route /*path=":param"*/ index element={<Test />} />
+        <Route path="/create" element={<MainLayout />}>
+          <Route index element={<CreatePost />} />
+        </Route>
+
+        <Route path="/post" element={<MainLayout />}>
+          <Route path=":id" element={<PostView />} />
         </Route>
       </Routes>
     </BrowserRouter>

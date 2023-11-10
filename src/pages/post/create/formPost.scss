@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 16px;
+
+    .formContainer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+
+        label {
+            margin-bottom: 8px;
+        }
+        textarea {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        input {
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        button {
+            padding: 8px 16px;
+            border: none;
+            background-color: #32385a;
+            color: #fff;
+            border-radius: 4px;
+            margin-bottom: 8px;
+
+            &:disabled {
+                background-color: #ccc;
+                color: #000;
+            }
+        }
+        
+    }}

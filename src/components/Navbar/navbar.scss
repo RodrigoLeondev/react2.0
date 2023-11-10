@@ -1,13 +1,13 @@
 .navbar{
     position: relative;
     display: flex;
-    background-color: #111421;
+    background-color: #f4f4f4;
     margin: 0px !important;
     padding: none;
     flex-direction: row;
     width: 100vw;
     height: 60px;
-    color: rgb(235, 235, 235);
+    color: rgb(252, 251, 251);
     align-items: center;
 
     a{
@@ -15,6 +15,23 @@
         color: wheat;
     }
     a:hover {
-        color: blue;
+        color: #333;
     }
+
+}
+.imgNav img{
+    background-color: none;
+    width: 70px;
+    padding-inline: 10px;
+}
+.inputNav input {
+    border-radius:  10px;
+    background-color: #f4eaea;
+    border: none;
+}
+
+
+.iconsnav a {
+    color: #333;
+    
 }
