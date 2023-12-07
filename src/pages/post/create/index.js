@@ -68,6 +68,19 @@ export default function PostCreate() {
   const validateForm = (e) => {
     e.preventDefault();
 
+    // fetch post to api
+
+    const fetchPost = async () => {
+      const response = await fetch("http://localhost:5001/post", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          body: JSON.stringify(data),
+        },
+      });
+      console.log(response);
+    };
+
     const title = document.getElementById("title").value;
     const author = document.getElementById("author").value;
     const content = document.getElementById("content").value;
